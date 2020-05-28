@@ -1,2 +1,0 @@
-# zomb
-mapgeoloc
