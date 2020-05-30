@@ -17,6 +17,7 @@
 <div id="zombi_map"></div>
 <script>
 	var zombi_map;
+	var score;
 	var tolerance = 40;
 	var old_position;
 	var all_markers = [];
@@ -33,7 +34,7 @@
 	var markers = data.split("\n");
 function initMap() {
 	zombi_map = new google.maps.Map(document.getElementById('zombi_map'), {
-	zoom: 15,
+	zoom: 20,
 	center: {lat: 48.93073041079985, lng: 2.425972527496354}
 	
 });
@@ -75,7 +76,7 @@ else {
 });
 	
 	old_position = marker;
-	var all_markers = [];
+	var all_markers[i];
 	for(var i=0; i < all_markers.length; i++) {
 	document.write(all_markers[i] + "<br>");
 	var distance = google.maps.geometry.spherical.computeDistanceBetween(pos, all_markers[i].getPosition());
@@ -83,6 +84,11 @@ else {
 	var what_is_it = all_markers[i].getIcon();
 	what_is_it = what_is_it.replace(".png" , "");
 	alert("Found a " + what_is_it );
+	all_markers[i].setMap(null);
+	if ( what_is_it != "covidian" ){
+	score += 10;
+	alert ("your score is" + score);
+}
 }
 	
 }
