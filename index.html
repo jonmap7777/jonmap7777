@@ -1,6 +1,9 @@
+<!DOCTYPE html>
 <html>
 
+
 <head>
+<title>map</title>
 <style>
 #zombi_map {
 	height: 100%;
@@ -60,7 +63,7 @@ else {
 	map: zombi_map,
 	icon: emoji
 	});
-	all_markers.push(marker);
+	all_markers.push(marker)
 }
 	
 	old_position = new google.maps.Marker({
@@ -78,14 +81,13 @@ else {
 });
 	
 	old_position = marker;
-	var all_markers;
 	for(var i=0; i < all_markers.length; i++) {
 	document.write(all_markers[i] + "<br>");
 	var distance = google.maps.geometry.spherical.computeDistanceBetween(pos, all_markers[i].getPosition());
 	if( distance < tolerance ){
 	var what_is_it = all_markers[i].getIcon();
 	what_is_it = what_is_it.replace(".png", "");
-	alert("Found a " + what_is_it );
+	alert("Found a " + what_is_it )
 	
 	
 }
