@@ -18,7 +18,7 @@
 <script>
 	var zombi_map;
 	var score;
-	var tolerance = 60;
+	var tolerance = 80;
 	var old_position;
 	var all_markers = [];
 	var data = `48.93424428912702 2.4186041816924897 covidian.png 
@@ -85,10 +85,7 @@ else {
 	what_is_it = what_is_it.replace(".png", "");
 	alert("Found a " + what_is_it );
 	all_markers[].setMap(null);
-	if ( what_is_it != "covidian" ){
-	score += 10;
-	alert ("your score is" + score);
-}
+	
 }
 	
 }
