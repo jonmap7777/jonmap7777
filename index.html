@@ -78,10 +78,6 @@ else {
 });
 	
 	old_position = marker;
-	var all_markers;
-	if (typeof all_markers == 'undefined') {
-   // ces instructions seront exécutées
-}
 	for(var i=0; i < all_markers.length; i++) {
 	document.write(all_markers[i] + "<br>");
 	var distance = google.maps.geometry.spherical.computeDistanceBetween(pos, all_markers[i].getPosition());
